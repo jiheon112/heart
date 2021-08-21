@@ -1,3 +1,51 @@
-.heart{
-    
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
+
+
+.heart {
+    width: 50px;
+    height: 50px;
+    background: #ea2027;
+    position: relative;
+ 
+    animation: heart 2s ease-in-out infinite;
+    transform: rotate(45deg);
+  }
+  .heart::before,
+  .heart::after {
+    content: "";
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    border-radius: 50%;
+    background: #ea2027;
+   
+  }
+  .heart::before {
+    left: -50%;
+  }
+  .heart::after {
+    top: -50%;
+  }
+
+  @keyframes heart {
+      0%{
+        transform: rotate(45deg) scale(1);
+
+      }
+      50%{
+        transform: rotate(45deg) scale(2);
+
+
+      }
+      100%{
+        transform: rotate(45deg) scale(1);
+
+
+      }
+  }
